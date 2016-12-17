@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -30,9 +31,10 @@ public class CustomToast {
 
         View customToastroot = inflater.inflate(layout, null);
 
-        Toast customtoast = new Toast(context);
+        TextView textView1 = (TextView) customToastroot.findViewById(R.id.textView1);
+        textView1.setText(texto);
 
-        customtoast.makeText(activity, texto, Toast.LENGTH_LONG);
+        Toast customtoast = new Toast(context);
 
         customtoast.setView(customToastroot);
         customtoast.setGravity(Gravity.CENTER_HORIZONTAL |
