@@ -32,7 +32,7 @@ public class CustomToast {
 
         Toast customtoast = new Toast(context);
 
-        customtoast.setText(texto);
+        customtoast.makeText(activity, texto, Toast.LENGTH_LONG);
 
         customtoast.setView(customToastroot);
         customtoast.setGravity(Gravity.CENTER_HORIZONTAL |
